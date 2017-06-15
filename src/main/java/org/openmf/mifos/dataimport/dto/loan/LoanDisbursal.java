@@ -17,6 +17,8 @@ public class LoanDisbursal {
 	 private final String note;
 	 
 	 private final String accountNumber;
+        
+         private final String externalId;
 	 
 	 private final String routingCode;
 	 
@@ -34,6 +36,7 @@ public class LoanDisbursal {
 	        this.locale = Locale.ENGLISH;
 	        this.note = "";
 	        this.accountNumber = null;
+                this.externalId = null;
 	        this.routingCode = null;
 	        this.receiptNumber = null;
 	        this.bankNumber = null;
@@ -66,6 +69,10 @@ public class LoanDisbursal {
 	    
 	    public String getAccountNumber() {
 	    	return accountNumber;
+	    }
+    
+            public String getExternalId() {
+	    	return externalId;
 	    }
 	    
 	    public String getRoutingCode() {
