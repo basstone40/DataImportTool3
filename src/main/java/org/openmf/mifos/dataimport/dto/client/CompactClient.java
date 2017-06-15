@@ -12,13 +12,16 @@ public class CompactClient {
     private final String officeName;
     
     private final ArrayList<Integer> activationDate;
+   
+    private final String externalId;
 	
     private final Boolean active;  
 
-	public CompactClient(Integer id, String displayName,  String officeName, ArrayList<Integer> activationDate, Boolean active) {
+	public CompactClient(Integer id, String displayName,  String officeName, String externalId, ArrayList<Integer> activationDate, Boolean active) {
 		this.id = id;
         this.displayName = displayName;
         this.activationDate = activationDate;
+        this.externalId = externalId;
         this.officeName = officeName;
         this.active = active;
     }
@@ -33,6 +36,10 @@ public class CompactClient {
     
     public ArrayList<Integer> getActivationDate() {
         return this.activationDate;
+    }
+
+    public String getExternalId() {
+        return this.externalId;
     }
     
     public String getOfficeName() {
