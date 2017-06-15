@@ -8,6 +8,8 @@ import org.openmf.mifos.dataimport.dto.Status;
 public class CompactLoan {
 
 	private final String accountNo;
+        
+        private final String externalId;
 	
 	private final String clientId;
 	
@@ -21,8 +23,9 @@ public class CompactLoan {
 	
 	private final Status status;
 	
-	public CompactLoan(String accountNo, String clientId, String clientName, String loanProductName, Double principal, LoanTimeline timeline, Status status) {
+	public CompactLoan(String accountNo, String externalId, String clientId, String clientName, String loanProductName, Double principal, LoanTimeline timeline, Status status) {
 		this.accountNo = accountNo;
+                this.externalId = externalId;
 		this.clientId = clientId;
 		this.clientName = clientName;
 		this.loanProductName = loanProductName;
@@ -35,6 +38,9 @@ public class CompactLoan {
         return this.accountNo;
     }
 	
+        public String getExternalId() {
+        return this.externalId;
+    }
 	public String getClientId() {
 		return clientId;
 	}
